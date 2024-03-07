@@ -1,4 +1,4 @@
-from typing import List , Dict , Optional
+from typing import  Optional
 import time
 from database import create_table , add_entry,get_entries
 menu : str = """ Please Select One Of The Following Option
