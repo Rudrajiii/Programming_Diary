@@ -1,4 +1,5 @@
 __pycache__
 .vscode
-templates
+assets
 company.db-journal
+flask_vnv

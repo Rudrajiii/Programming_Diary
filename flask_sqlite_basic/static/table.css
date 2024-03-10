@@ -1,0 +1,125 @@
+#header_td{
+    height: 5vh;
+}
+thead{
+    font-family: "Anton", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.3rem;
+    font-stretch: extra-expanded;
+    height: 9vh;
+    color: rgb(0, 0, 0);
+   
+}
+table{
+    margin-top: 1rem;
+}
+.header_td{
+    background: rgb(157, 189, 202);
+}
+td{
+    font-size: 1.3rem;
+    padding: 1rem;
+    border: 2px solid ;
+    
+}
+#btn{
+    gap: 2vh;
+    margin-top: 2rem;
+   
+}
+#btn:hover{
+    background:rgba(155, 129, 129, 0.5) ;
+    transition: all 0.5s ease;
+}
+.edit-btn{
+    color: rgb(25, 100, 25);
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-stretch: extra-expanded;
+    
+}
+.edit-btn:hover{
+    background: rgba(155, 129, 129, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+.dlt-btn:hover{
+    background: rgba(155, 129, 129, 0.5);
+    transition: all 0.5s ease-in-out;
+}
+.dlt-btn{
+    color: rgb(251, 34, 34);
+    font-family: "Anton", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.4rem;
+    font-stretch: extra-expanded;
+}
+#individiual_stdnt_id{
+    color: red;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    overflow: hidden;
+}
+#submit-btn{
+    padding: .8rem 1.7rem;
+    overflow: hidden;
+}
+#form-elem{
+   border: 3px solid rgb(1, 1, 1);
+   width: 470px;
+   border-radius: .9rem;
+   /* background: rgb(255, 227, 117); */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   min-height: 600px;
+}
+input{
+    width: 20rem;
+    padding:.6rem;
+    border-radius: .6rem;
+    text-align: center;
+    font-size: 1.1rem;
+    border: .7px solid;
+}
+#edit-stndt-head{
+    font-size: 3rem;
+   
+}
+.same-cls{
+    font-size: 1.1rem;
+    font-family: "popins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    overflow: hidden;
+}
+
+#strong{
+    color: blue;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+
+}
+.msg{
+    color: green;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    & img{
+        border-radius: 1.2rem;
+        margin-top: 1rem;
+    }
+}
