@@ -27,7 +27,7 @@ def addrec():
                 cur.execute("INSERT INTO students (name, addr, city, enrollment_no) VALUES (?,?,?,?)",(nm, addr, city, enrollment_no))
 
                 con.commit()
-                msg = "Record successfully added to database"
+                msg = "Record has been successfully added"
         except:
             con.rollback()
             msg = "Error in the INSERT"

@@ -68,6 +68,27 @@ td{
 #submit-btn{
     padding: .8rem 1.7rem;
     overflow: hidden;
+    color: rgb(21, 137, 13);
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    
+}
+#bttnn{
+    color: rgb(21, 137, 13);
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+#submit-btn:hover{
+    background:rgba(83, 167, 77, 0.516);
+    transition: all .2s ease-in-out;
+}
+#bttnn:hover{
+    background:rgba(83, 167, 77, 0.516);
+    transition: all .2s ease-in-out;
 }
 #form-elem{
    border: 3px solid rgb(1, 1, 1);
@@ -122,4 +143,38 @@ input{
         border-radius: 1.2rem;
         margin-top: 1rem;
     }
+}
+#adding-new-student{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+    color: red;
+}
+
+#add-student-id{
+    border: 2px solid rgb(0, 0, 0);
+    width: 600px;
+    min-height: 400px;
+    display: grid;
+    place-items:center;
+    margin-top: 1rem;
+    border-radius: .8rem;
+}
+.add-stndts{
+    width: 25vw;
+    padding: .8rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.bear{
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.4rem;
+    background: transparent;
+}
+#textarea{
+    width: 25vw;
+    padding: 1rem;
+    border-radius: .7rem;
 }
