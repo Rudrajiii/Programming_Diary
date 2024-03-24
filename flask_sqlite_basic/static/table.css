@@ -73,6 +73,7 @@ td{
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
+    cursor: pointer;
     
 }
 #bttnn{
@@ -81,6 +82,7 @@ td{
     font-weight: 400;
     font-style: normal;
     font-size: 1.5rem;
+    cursor: pointer;
 }
 #submit-btn:hover{
     background:rgba(83, 167, 77, 0.516);
