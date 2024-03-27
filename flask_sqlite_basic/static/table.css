@@ -8,8 +8,7 @@ thead{
     font-size: 1.3rem;
     font-stretch: extra-expanded;
     height: 9vh;
-    color: rgb(0, 0, 0);
-   
+    color: rgb(0, 0, 0); 
 }
 table{
     margin-top: 1rem;
@@ -179,4 +178,4 @@ input{
     width: 25vw;
     padding: 1rem;
     border-radius: .7rem;
-}
+} 

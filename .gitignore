@@ -3,3 +3,4 @@ __pycache__
 assets
 company.db-journal
 flask_vnv
+personal_movie_tracker_app
