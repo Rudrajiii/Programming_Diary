@@ -4,5 +4,3 @@ assets
 company.db-journal
 flask_vnv
 personal_movie_tracker_app
-flask_sqlite_basic
-apply.py
