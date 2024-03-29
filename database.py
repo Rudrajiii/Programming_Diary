@@ -10,7 +10,7 @@ CREATE_WATCHLIST_TABLE = """CREATE TABLE IF NOT EXISTS watched (
     title TEXT
 );"""
 INSERT_MOVIES = "INSERT INTO movies (title, release_timestamp) VALUES (? , ?);"
-DELETE_MOVIE = "DELETE FROM movies WHERE title = ?;"
+DELETE_MOVIE = "SELECT * FROM movies WHERE title = ?;"
 SELECT_ALL_MOVIES = "SELECT * FROM movies;"
 SELECT_UPCOMING_MOVIES = "SELECT * FROM movies WHERE release_timestamp > ?;"
 SELECT_WATCHED_MOVIES = "SELECT * FROM watched WHERE watcher_name = ?;"
@@ -40,8 +40,10 @@ def get_movie(upcoming=False):
 
 def watch_movie(watcher_name,title):
     with connection:
-        connection.execute(DELETE_MOVIE , (title,))
-        connection.execute(INSERT_WATCHED_MOVIES , (watcher_name,title))
+        cursor = connection.execute(DELETE_MOVIE , (title,))
+        movie_details = cursor.fetchone()
+        connection.execute(INSERT_WATCHED_MOVIES, (watcher_name, title))
+        return movie_details
 def get_watched_movies(watcher_name):
     with connection:
         cursor = connection.cursor()
