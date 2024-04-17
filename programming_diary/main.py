@@ -1,6 +1,6 @@
 from typing import  Optional
 import time
-from programming_diary.database import create_table , add_entry,get_entries
+from database import create_table , add_entry,get_entries
 menu : str = """ Please Select One Of The Following Option
 1) Add New Entry For Today.
 2) View Entries.
