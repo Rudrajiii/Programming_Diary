@@ -16,6 +16,9 @@ SELECT_UPCOMING_MOVIES = "SELECT * FROM movies WHERE release_timestamp > ?;"
 SELECT_WATCHED_MOVIES = "SELECT * FROM watched WHERE watcher_name = ?;"
 INSERT_WATCHED_MOVIES = "INSERT INTO watched (watcher_name,title) VALUES (? ,?);"
 SET_MOVIE_WATCHED = "UPDATE movies SET watched = 1 WHERE title = ?;"
+UNIQUE_USERS = "SELECT watcher_name FROM watched;"
+ALL_MOVIES_ADDED = "SELECT title FROM movies;"
+
 
 connection = sqlite3.connect("database.db")
 
@@ -50,3 +53,20 @@ def get_watched_movies(watcher_name):
         cursor.execute(SELECT_WATCHED_MOVIES ,(watcher_name,))
         return cursor.fetchall()
 
+def user_hashMap():
+    user_set = {}
+    with connection:
+        cursor = connection.execute(UNIQUE_USERS)
+        for row in cursor:
+            watcher_name = row[0]
+            user_set[watcher_name] = "Unique User"
+    return user_set
+
+def added_movies():
+    all_added_movies = {}
+    with connection:
+        cursor = connection.execute(ALL_MOVIES_ADDED)
+        for movie in cursor:
+            movie = movie[0]
+            all_added_movies[movie] = "Uniquely Added"
+    return all_added_movies
