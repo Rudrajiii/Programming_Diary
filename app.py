@@ -32,9 +32,17 @@ def print_movie_list(heading , movies):
 def prompt_watch_movie():
     watcher_name = input("Username: ")
     movie_title = input("Enter Movie Title You Have Watched: ")
-    database.watch_movie(watcher_name,movie_title)
-
-
+    added_movies = database.added_movies()
+    # print(added_movies)
+    if movie_title in added_movies:
+        database.watch_movie(watcher_name,movie_title)
+    else:
+        release_date = input("Release Date (DD-MM-YYYY): ")
+        parsed_date = datetime.datetime.strptime(release_date, "%d-%m-%Y")
+        timestamp = parsed_date.timestamp()
+        database.add_movie(movie_title, timestamp)
+        database.watch_movie(watcher_name,movie_title)
+        
 def print_movie_list_movie(watcher_name , movies):
     print(f"{watcher_name} watche's the movies: ")
     for movie in movies:
@@ -54,9 +62,14 @@ while (user_input := input(menu)) != "6":
         prompt_watch_movie()
     elif user_input == "5":
         watcher_name = input("Username: ")
-        movies = database.get_watched_movies(watcher_name)
-        print_movie_list_movie(watcher_name,movies)
+        all_user = database.user_hashMap()
+        if watcher_name in all_user:
+            movies = database.get_watched_movies(watcher_name)
+            print_movie_list_movie(watcher_name, movies)
+        else:
+            print("User Not Found: " + watcher_name) 
     else:
         print("Invalid input , Please try again!")
 
-
+# save = database.added_movies()
+# print(save)
